@@ -1,6 +1,6 @@
 package models;
 
-public class Employee extends Person{
+public class Employee extends Person {
     //Fields
     private double salary;
     private String position;
@@ -32,5 +32,9 @@ public class Employee extends Person{
     }
     public String getPosition(){
         return position;
+    }
+    @Override
+    public double getPaymentAmount(){
+        return salary;
     }
 }

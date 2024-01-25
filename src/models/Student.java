@@ -1,6 +1,6 @@
 package models;
 
-public class Student extends Person{
+public class Student extends Person {
     //GPA
     private double gpa;
     //Output of parameters (e.g. “Student: 1. John Lennon”)
@@ -24,5 +24,10 @@ public class Student extends Person{
     }
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+    @Override
+    public double getPaymentAmount(){
+        if (gpa > 2.67) return 36660.00;
+        return 0;
     }
 }

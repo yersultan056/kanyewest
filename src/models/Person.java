@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Person {
+public abstract class Person implements Payable{
     //fields
     private int id;
     private String name;
