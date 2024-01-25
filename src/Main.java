@@ -2,6 +2,8 @@ import models.Person;
 import models.Employee;
 import models.Student;
 import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args){
         //Several employees and students (Messi is not taking stipend because of GPA)
@@ -20,12 +22,14 @@ public class Main {
         dudes.add(Employee3);
         dudes.add(Student1);
         dudes.add(Student2);
+        Collections.sort(dudes);
         //A call to printData method
         printData(dudes);
     }
     public static void printData(Iterable<Person> dudes){
+        //foreach loop
         for(Person dude : dudes){
-            System.out.println(dude.toString() + "earns " + dude.getPaymentAmount() + " tenge");
+            System.out.println(dude.toString() + " earns " + dude.getPaymentAmount() + " tenge");
         }
     }
 }

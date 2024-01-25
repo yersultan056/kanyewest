@@ -1,6 +1,6 @@
 package models;
 
-public class Student extends Person {
+public class Student extends Person{
     //GPA
     private double gpa;
     //Output of parameters (e.g. “Student: 1. John Lennon”)
@@ -29,5 +29,10 @@ public class Student extends Person {
     public double getPaymentAmount(){
         if (gpa > 2.67) return 36660.00;
         return 0;
+    }
+    public int compareTo(Person person){
+        if(getPaymentAmount() == person.getPaymentAmount()) return 0;
+        else if (getPaymentAmount() < person.getPaymentAmount()) return -1;
+        return 1;
     }
 }

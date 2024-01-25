@@ -1,6 +1,6 @@
 package models;
 
-public class Employee extends Person {
+public class Employee extends Person{
     //Fields
     private double salary;
     private String position;
@@ -36,5 +36,10 @@ public class Employee extends Person {
     @Override
     public double getPaymentAmount(){
         return salary;
+    }
+    public int compareTo(Person person){
+        if(salary == person.getPaymentAmount()) return 0;
+        else if (salary < person.getPaymentAmount()) return -1;
+        return 1;
     }
 }
