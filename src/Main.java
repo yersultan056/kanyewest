@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
         //Several employees and students (Messi is not taking stipend because of GPA)
-        Employee Employee1 = new Employee("Kendrick", "Lamar", "Rapper", 5000);
-        Employee Employee2 = new Employee("Michael", "Jordan", "Spider-man", 540000);
-        Employee Employee3 = new Employee("Dwayne", "Johnson", "Plumber", 100000.27);
+        Employee Employee1 = new Employee("Kendrick", "Lamar", "Employee", 5000);
+        Employee Employee2 = new Employee("Michael", "Jordan", "Employee", 540000);
+        Employee Employee3 = new Employee("Dwayne", "Johnson", "Employee", 100000.27);
         Student Student1 = new Student("Messi", "Lionel", 2.66);
         Student Student2 = new Student("Ishow", "Speed", 3.98);
 
@@ -20,7 +20,12 @@ public class Main {
         dudes.add(Employee3);
         dudes.add(Student1);
         dudes.add(Student2);
-
-        printData();
+        //A call to printData method
+        printData(dudes);
+    }
+    public static void printData(Iterable<Person> dudes){
+        for(Person dude : dudes){
+            System.out.println(dude.toString() + "earns " + dude.getPaymentAmount() + " tenge");
+        }
     }
 }
