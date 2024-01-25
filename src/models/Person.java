@@ -20,7 +20,7 @@ public abstract class Person {
     //Output of parameters (e.g. “1. John Lennon”)
     @Override
     public String toString() {
-        return id + '.' + name + surname;
+        return id + ". " + name + ' ' + surname;
     }
     //getters and setters for fields (id have only getter)
     public void setName(String name) {
@@ -38,7 +38,7 @@ public abstract class Person {
     public String getSurname() {
         return surname;
     }
-    //(I understand the position can be Employee or Student)
+    //Student is default position, Employee need to determine
     public String getPosition(){
         return "Student";
     }
